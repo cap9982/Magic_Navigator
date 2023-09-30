@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Magic menu indicator</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="#">
+                    <spam class="icon"><ion-icon name="home-outline"></ion-icon></spam>
+                    <spam class="text">Home</spam>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <spam class="icon"><ion-icon name="person-outline"></ion-icon></spam>
+                    <spam class="text">Profile</spam>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <spam class="icon"><ion-icon name="chatbox-ellipses-outline"></ion-icon></spam>
+                    <spam class="text">Messages</spam>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <spam class="icon"><ion-icon name="image-outline"></ion-icon></spam>
+                    <spam class="text">Photos</spam>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <spam class="icon"><ion-icon name="settings-outline"></ion-icon></spam>
+                    <spam class="text">Settings</spam>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) =>
+                item.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((item) =>
+            item.addEventListener('click', activeLink));
+
+
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
